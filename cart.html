@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart | E-TRIC CENTER</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.cart-container{
+max-width:900px;
+margin:40px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.cart-container h2{
+margin-bottom:20px;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #ddd;
+padding:15px 0;
+}
+
+.cart-item h4{
+margin:0;
+}
+
+.cart-item button{
+background:red;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.total{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+text-align:right;
+}
+
+.checkout{
+margin-top:20px;
+text-align:right;
+}
+
+.checkout button{
+background:#5F4A8B;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.empty{
+text-align:center;
+color:gray;
+padding:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+     <div class="menu-icon" onclick="openMenu()">
+<i class="fa fa-bars"></i>
+</div>
+
+<!-- SIDEBAR MENU -->
+<div id="sideMenu" class="side-menu">
+
+<div class="menu-header">
+<h2>E-TRIC CENTER</h2>
+<span class="close-btn" onclick="closeMenu()">×</span>
+</div>
+
+<a href="index.html">Home</a>
+<a href="accessories.html">Accessories </a>
+<a href="apple.html">Apple </a>
+<a href="pixel.html">Google Pixel </a>
+<a href="oraimo.html">Oraimo </a>
+<a href="samsung.html">Samsung </a>
+<a href="storage.html">Storage</a>
+
+</div>
+<div class="logo">E-TRIC <span>CENTER</span></div>
+
+ <a href="cart.html" class="cart">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </a>
+</header>
+
+<section class="hero">
+    
+   
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search for products...">
+    </div>
+
+</section>
+
+
+<section class="categories">
+
+
+<div class="navbar1">
+
+<a href="storage.html">Storage</a>
+
+<a href="accessories.html">Accessories</a>
+
+<a href="apple.html">Apple</a>
+<a href="oraimo.html">Oraimo</a>
+
+<a href="pixel.html">Google Pixel</a>
+
+<a href="samsung.html">Samsung</a>
+</div>
+
+
+</section>
+
+<div class="cart-container">
+
+<h2>Your Shopping Cart</h2>
+
+<div id="cart-items"></div>
+
+<div class="total" id="cart-total"></div>
+
+<div class="checkout">
+<button onclick="goToCheckout()">Proceed to Checkout</button>
+
+</div>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="#">Return & Refund Policy</a>
+        <span>|</span>
+        <a href="#">Shipping Information</a>
+        <span>|</span>
+        <a href="#">About Us</a>
+        <span>|</span>
+        <a href="contact.html">Contact Us</a>
+                
+    </div>
+        <div class="footer-contact">
+            <p>Phone number: <strong>+254 798 905 758</strong></p>
+            <p>Email: <strong>e-tric@gmail.com</strong></p>
+            <p>Address:  <strong>E-TRIC CENTRE ltd,<br> Behind Naivas<br>Along, Mlolongo Lane</p>
+        </div>
+
+        </footer>
+    
+        <script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function displayCart(){
+
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+cartItems.innerHTML = "";
+
+let total = 0;
+
+if(cart.length === 0){
+cartItems.innerHTML = "<p class='empty'>Your cart is empty</p>";
+cartTotal.innerHTML = "";
+return;
+}
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+cartItems.innerHTML += `
+<div class="cart-item">
+
+<div>
+<h4>${item.name}</h4>
+<p>Ksh ${item.price}</p>
+</div>
+
+<button onclick="removeItem(${index})">Remove</button>
+
+</div>
+`;
+
+});
+
+cartTotal.innerHTML = "Total: Ksh " + total;
+
+}
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+displayCart();
+
+}
+
+displayCart();
+
+function goToCheckout(){
+
+if(cart.length === 0){
+alert("Your cart is empty");
+return;
+}
+
+window.location.href = "checkout.html";
+
+}
+
+</script>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

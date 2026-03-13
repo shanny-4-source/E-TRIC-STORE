@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-TRIC CENTER</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+    <div class="menu-icon" onclick="openMenu()">
+<i class="fa fa-bars"></i>
+</div>
+
+<!-- SIDEBAR MENU -->
+<div id="sideMenu" class="side-menu">
+
+<div class="menu-header">
+<h2>E-TRIC CENTER</h2>
+<span class="close-btn" onclick="closeMenu()">×</span>
+</div>
+
+<a href="index.html">Home</a>
+<a href="accessories.html">Accessories </a>
+<a href="apple.html">Apple </a>
+<a href="pixel.html">Google Pixel </a>
+<a href="oraimo.html">Oraimo </a>
+<a href="samsung.html">Samsung </a>
+<a href="storage.html">Storage</a>
+
+
+</div>
+    <div class="logo">E-TRIC <span>CENTER</span></div>
+
+    <a href="cart.html" class="cart">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </a>
+</header>    
+
+
+<section class="hero">
+    
+   
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search for products...">
+    </div>
+
+</section>
+
+
+<section class="categories">
+
+
+<div class="navbar1">
+
+<a href="storage.html">Storage</a>
+
+<a href="accessories.html">Accessories</a>
+
+<a href="apple.html">Apple</a>
+<a href="oraimo.html">Oraimo</a>
+
+<a href="pixel.html">Google Pixel</a>
+
+<a href="samsung.html">Samsung</a>
+</div>
+
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products"> 
+    <h3>Best Selling</h3> 
+    <div class="product-slider"> 
+        <div class="product-container" id="product-container"> 
+            <div class="product"> 
+                <img src="images/iphone 17 pro max.jpg"> 
+                <h4>Iphone 17 Pro Max</h4> 
+                <p>Ksh 150,000</p> 
+                <button onclick="addToCart('Iphone 17 Pro Max', 150000)">Add to Cart</button> 
+            </div> 
+            <div class="product"> 
+                <img src="images/oraimo space pods.jpg"> 
+                <h4>Oraimo Space Pods</h4> 
+                <p>Ksh 12,000</p> 
+                <button onclick="addToCart('Oraimo Space Pods', 12000)">Add to Cart</button> 
+            </div> 
+            <div class="product"> 
+                <img src="images/Samsung galaxy S25 Ultra.jpg"> 
+                <h4>Samsung Galaxy S25 Ultra</h4> 
+                <p>Ksh 110,000</p> 
+                <button onclick="addToCart('Samsung Galaxy S25 Ultra', 110000)">Add to Cart</button> 
+                </div>
+                <div class="product"> 
+                    <img src="images/Sony WH-CH720N.jpg"> 
+                    <h4>Sony WH-CH720N</h4> <p>Ksh 8,500</p> 
+                    <button onclick="addToCart('Sony WH-CH720N', 8500)">Add to Cart</button> 
+                </div> 
+            </div> 
+        </section>
+
+
+<section class="categories-section">
+
+<div class="category-card">
+
+<img src="images/pixel icon.jpg">
+
+<div class="category-text">
+<h3>Google Pixel</h3>
+<p>Pixel Phones</p>
+<p>Pixel Buds</p>
+<a href="pixel.html">Shop More >></a>
+</div>
+
+</div>
+
+
+<div class="category-card">
+
+<img src="images/apple icon (2).jpg">
+
+<div class="category-text">
+<h3>Apple</h3>
+<p>Accessories</p>
+<p>iPhone</p>
+<p>MacBook</p>
+<p>AirPods</p>
+<a href="apple.html">Shop More >></a>
+</div>
+
+</div>
+
+
+<div class="category-card">
+
+<img src="images/Samsung icon.jpg">
+
+<div class="category-text">
+<h3>Samsung</h3>
+<p>Galaxy S Series</p>
+<p>Galaxy Z Series</p>
+<p>Galaxy A Series</p>
+<p>Galaxy M & F Series</p>
+<a href="samsung.html">Shop More >></a>
+</div>
+
+</div>
+
+
+<div class="category-card">
+
+<img src="images/Oraimo icon.jpg">
+
+<div class="category-text">
+<h3>Oraimo</h3>
+<p>Oraimo Watches</p>
+<p>Headset</p>
+<p>Oraimo Buds</p>
+<p>Speakers</p>
+<a href="oraimo.html">Shop More >></a>
+</div>
+
+</div>
+
+
+<div class="category-card">
+
+<img src="images/accessories icon (2).jpg">
+
+<div class="category-text">
+<h3>Accessories</h3>
+<p>Earphones</p>
+<p>Cables</p>
+<p>Chargers</p>
+<p>Powerbank</p>
+<a href="accessories.html">Shop More >></a>
+</div>
+
+</div>
+
+
+<div class="category-card">
+
+<img src="images/storage icon.jpg">
+
+<div class="category-text">
+<h3>Storage</h3>
+<p>Flash Drives</p>
+<p>Hard Drives</p>
+<p>Memory Cards</p>
+<p>USB Hubs</p>
+<a href="storage.html">Shop More >></a>
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="#">Return & Refund Policy</a>
+        <span>|</span>
+        <a href="#">Shipping Information</a>
+        <span>|</span>
+        <a href="#">About Us</a>
+        <span>|</span>
+        <a href="contact.html">Contact Us</a>
+                
+    </div>
+        <div class="footer-contact">
+            <p>Phone number: <strong>+254 798 905 758</strong></p>
+            <p>Email: <strong>e-tric@gmail.com</strong></p>
+            <p>Address:  <strong>E-TRIC CENTRE ltd,<br> Behind Naivas<br>Along, Mlolongo Lane</p>
+        </div>
+
+        </footer>
+
+        
+
+<script src="script.js"></script>
+
+</body>
+</html>

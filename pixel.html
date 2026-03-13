@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-TRIC CENTER</title>
+<link rel="stylesheet" href="products.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+    <header class="navbar">
+    <div class="menu-icon" onclick="openMenu()">
+<i class="fa fa-bars"></i>
+</div>
+
+<!-- SIDEBAR MENU -->
+<div id="sideMenu" class="side-menu">
+
+<div class="menu-header">
+<h2>E-TRIC CENTER</h2>
+<span class="close-btn" onclick="closeMenu()">×</span>
+</div>
+
+<a href="index.html">Home</a>
+<a href="accessories.html">Accessories </a>
+<a href="apple.html">Apple </a>
+<a href="pixel.html">Google Pixel </a>
+<a href="oraimo.html">Oraimo </a>
+<a href="samsung.html">Samsung </a>
+<a href="storage.html">Storage</a>
+
+
+</div>
+    <div class="logo">E-TRIC <span>CENTER</span></div>
+
+    <a href="cart.html" class="cart">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </a>
+</header>    
+
+
+<section class="hero">
+    
+   
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search for products...">
+    </div>
+
+</section>
+<section class="categories">
+
+
+<div class="navbar1">
+
+<a href="storage.html">Storage</a>
+
+<a href="accessories.html">Accessories</a>
+
+<a href="apple.html">Apple</a>
+<a href="oraimo.html">Oraimo</a>
+
+<a href="pixel.html">Google Pixel</a>
+
+<a href="samsung.html">Samsung</a>
+</div>
+
+<div class="container">
+
+<h2>Shop by Category</h2>
+
+<div class="categories">
+
+<div class="category">
+<p>Smartphones</p>
+</div>
+
+<div class="category">
+
+<p>Accessories</p>
+</div>
+
+
+
+</div>
+
+<div class="featured-header">
+<h2>SMARTPHONES</h2>
+</div>
+
+<div class="products">
+
+<div class="product">
+<img src="images/Google Pixel 10 Pro XL.jpg">
+<h4>Google Pixel 10 Pro XL</h4>
+<p>110,000 KSH</p>
+<button onclick="addToCart('Google Pixel 10 Pro XL', 110000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Google Pixel 6A.jpg">
+<h4>Google Pixel 6A</h4>
+<p>60,000 KSH</p>
+<button onclick="addToCart('Google Pixel 6A', 60000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Google Pixel 7a 5G.jpg">
+<h4>Google Pixel 7a 5G</h4>
+<p>75,900 KSH</p>
+<button onclick="addToCart('Google Pixel 7a 5G', 75900)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Google Pixel 9 Pro.jpg">
+<h4>Google Pixel 9 Pro</h4>
+<p>90,000 KSH</p>
+<button onclick="addToCart('Google Pixel 9 Pro', 90000)">Add to Cart</button>
+
+</div>
+</div>
+
+<div class="featured-header">
+<h2>ACCESSORIES</h2>
+</div>
+
+<div class="products" id="products">
+
+<div class="product">
+<img src="images/Google Pixel Buds Pro 2.jpg">
+<h4>Google Pixel Buds Pro 2</h4>
+<p>10,000 KSH</p>
+<button onclick="addToCart('Google Pixel Buds Pro 2', 10000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Google Pixel Watch 3.jpg">
+<h4>Google Pixel Watch 3</h4>
+<p>40,000 KSH</p>
+<button onclick="addToCart('Google Pixel Watch 3', 40000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/The Google Pixel Watch.jpg">
+<h4>Google Pixel Watch</h4>
+<p>35,000 KSH</p>
+<button onclick="addToCart('Google Pixel Watch', 35000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Soft Silicone Phone Case For Google Pixel 10 9 8 Pro XL.jpg">
+<h4>Google Pixel 10 9 8 Pro XL</h4>
+<p>2,000 KSH</p>
+<button onclick="addToCart('Google Pixel 10 9 8 Pro XL', 2000)">Add to Cart</button>
+
+</div>
+</div>
+
+
+</section>
+
+
+</section>
+<footer class="footer">
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="#">Return & Refund Policy</a>
+        <span>|</span>
+        <a href="#">Shipping Information</a>
+        <span>|</span>
+        <a href="#">About Us</a>
+        <span>|</span>
+        <a href="contact.html">Contact Us</a>
+                
+    </div>
+        <div class="footer-contact">
+            <p>Phone number: <strong>+254 798 905 758</strong></p>
+            <p>Email: <strong>e-tric@gmail.com</strong></p>
+            <p>Address:  <strong>E-TRIC CENTRE ltd,<br> Behind Naivas<br>Along, Mlolongo Lane</p>
+        </div>
+
+        </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

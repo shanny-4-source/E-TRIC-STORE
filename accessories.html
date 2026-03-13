@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-TRIC CENTER</title>
+<link rel="stylesheet" href="products.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="navbar">
+    <div class="menu-icon" onclick="openMenu()">
+<i class="fa fa-bars"></i>
+</div>
+
+<!-- SIDEBAR MENU -->
+<div id="sideMenu" class="side-menu">
+
+<div class="menu-header">
+<h2>E-TRIC CENTER</h2>
+<span class="close-btn" onclick="closeMenu()">×</span>
+</div>
+
+<a href="index.html">Home</a>
+<a href="accessories.html">Accessories </a>
+<a href="apple.html">Apple </a>
+<a href="pixel.html">Google Pixel </a>
+<a href="oraimo.html">Oraimo </a>
+<a href="samsung.html">Samsung </a>
+<a href="storage.html">Storage</a>
+
+
+</div>
+    <div class="logo">E-TRIC <span>CENTER</span></div>
+
+    <a href="cart.html" class="cart">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </a>
+</header>    
+
+
+<section class="hero">
+    
+   
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search for products...">
+    </div>
+
+</section>
+
+</section>
+<section class="categories">
+
+
+<div class="navbar1">
+
+<a href="storage.html">Storage</a>
+
+<a href="accessories.html">Accessories</a>
+
+<a href="apple.html">Apple</a>
+<a href="oraimo.html">Oraimo</a>
+
+<a href="pixel.html">Google Pixel</a>
+
+<a href="samsung.html">Samsung</a>
+</div>
+
+<div class="container">
+
+<h2>Shop by Category</h2>
+
+<div class="categories">
+
+<div class="category">
+<p>Power Banks</p>
+</div>
+
+<div class="category">
+
+<p>Chargers</p>
+</div>
+
+<div class="category">
+<p>Others</p>
+</div>
+
+
+</div>
+
+<div class="featured-header">
+<h2>POWER BANKS</h2>
+</div>
+
+<div class="products" id="products">
+
+<div class="product">
+<img src="images/Iphone power bank.jpg">
+<h4>Iphone Power Bank 30,000 mAh</h4>
+<p>7,000 KSH</p>
+<button onclick="addToCart('Iphone Power Bank ', 7000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/charmast power bank.jpg">
+<h4>Charmast Power Bank 10,000 mAh</h4>
+<p>5,000 KSH</p>
+<button onclick="addToCart('Charmast Power Bank', 5000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/wireless power bank.jpg">
+<h4>Ankers Zolo Wireless Charging</h4>
+<p>10,000 KSH</p>
+<button onclick="addToCart('Wireless Power Bank', 10000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/wired power bank.jpg">
+<h4>Wired Power Bank 20,000 mAh</h4>
+<p>9,000 KSH</p>
+<button onclick="addToCart('Wired Power Bank', 9000)">Add to Cart</button>
+
+</div>
+</div>
+
+<div class="featured-header">
+<h2>CHARGERS</h2>
+</div>
+
+<div class="products" id="products">
+
+<div class="product">
+<img src="images/Travel charger Adapter.jpg">
+<h4>Travel Charger Adapter</h4>
+<p>1,000 KSH</p>
+<button onclick="addToCart('Travel Charger Adapter', 1000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Laptop Charger Type C.jpg">
+<h4>Laptop Charger Type C</h4>
+<p>10,000 KSH</p>
+<button onclick="addToCart('Laptop Charger Type C', 10000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/iphone charger.jpg">
+<h4>iPhone Charger</h4>
+<p>1,500 KSH</p>
+<button onclick="addToCart('iPhone Charger', 1500)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/samsung charger.jpg">
+<h4>Samsung Charger</h4>
+<p>9,000 KSH</p>
+<button onclick="addToCart('Samsung Charger', 9000)">Add to Cart</button>
+
+</div>
+</div>
+
+<div class="featured-header">
+<h2>OTHERS</h2>
+</div>
+
+<div class="products" id="products">
+
+<div class="product">
+<img src="images/sticky phone grip holder.jpg">
+<h4>Sticky Phone Grip Holder</h4>
+<p>1,000 KSH</p>
+<button onclick="addToCart('Sticky Phone Grip Holder', 1000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/warch and pods set.jpg">
+<h4>Wireless Charging and Pods Set</h4>
+<p>15,000 KSH</p>
+<button onclick="addToCart('Wireless Charging and Pods Set', 15000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/JBL Go 4 BT.jpg">
+<h4>JBL Go 4 BT</h4>
+<p>12,000 KSH</p>
+<button onclick="addToCart('JBL Go 4 BT', 12000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="images/Universal Car Phone Holder.jpg">
+<h4>Universal Car Phone Holder</h4>
+<p>1,500 KSH</p>
+<button onclick="addToCart('Universal Car Phone Holder', 1500)">Add to Cart</button>
+
+</div>
+</div>
+
+
+
+</section>
+<footer class="footer">
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="#">Return & Refund Policy</a>
+        <span>|</span>
+        <a href="#">Shipping Information</a>
+        <span>|</span>
+        <a href="#">About Us</a>
+        <span>|</span>
+        <a href="contact.html">Contact Us</a>
+                
+    </div>
+        <div class="footer-contact">
+            <p>Phone number: <strong>+254 798 905 758</strong></p>
+            <p>Email: <strong>e-tric@gmail.com</strong></p>
+            <p>Address:  <strong>E-TRIC CENTRE ltd,<br> Behind Naivas<br>Along, Mlolongo Lane</p>
+        </div>
+
+        </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
