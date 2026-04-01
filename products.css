@@ -209,6 +209,7 @@ display:flex;
 gap:20px;
 overflow-x:auto;
 padding:20px 0;
+color: white;
 }
 
 .product{

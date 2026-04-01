@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "db.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,13 +95,13 @@ padding:40px;
 <span class="close-btn" onclick="closeMenu()">×</span>
 </div>
 
-<a href="index.html">Home</a>
-<a href="accessories.html">Accessories </a>
-<a href="apple.html">Apple </a>
-<a href="pixel.html">Google Pixel </a>
-<a href="oraimo.html">Oraimo </a>
-<a href="samsung.html">Samsung </a>
-<a href="storage.html">Storage</a>
+<a href="index.php">Home</a>
+<a href="accessories.php">Accessories </a>
+<a href="apple.php">Apple </a>
+<a href="pixel.php">Google Pixel </a>
+<a href="oraimo.php">Oraimo </a>
+<a href="samsung.php">Samsung </a>
+<a href="storage.php">Storage</a>
 
 </div>
 <div class="logo">E-TRIC <span>CENTER</span></div>
@@ -122,16 +127,16 @@ padding:40px;
 
 <div class="navbar1">
 
-<a href="storage.html">Storage</a>
+<a href="storage.php">Storage</a>
 
-<a href="accessories.html">Accessories</a>
+<a href="accessories.php">Accessories</a>
 
-<a href="apple.html">Apple</a>
-<a href="oraimo.html">Oraimo</a>
+<a href="apple.php">Apple</a>
+<a href="oraimo.php">Oraimo</a>
 
-<a href="pixel.html">Google Pixel</a>
+<a href="pixel.php">Google Pixel</a>
 
-<a href="samsung.html">Samsung</a>
+<a href="samsung.php">Samsung</a>
 </div>
 
 
@@ -155,12 +160,6 @@ padding:40px;
 <footer class="footer">
     <div class="footer-links">
         <a href="index.html">Home</a>
-        <span>|</span>
-        <a href="#">Return & Refund Policy</a>
-        <span>|</span>
-        <a href="#">Shipping Information</a>
-        <span>|</span>
-        <a href="#">About Us</a>
         <span>|</span>
         <a href="contact.html">Contact Us</a>
                 
@@ -234,7 +233,7 @@ alert("Your cart is empty");
 return;
 }
 
-window.location.href = "checkout.html";
+window.location.href = "checkout.php";
 
 }
 

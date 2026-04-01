@@ -1,3 +1,11 @@
+<?php
+include "db.php";
+
+$sql = "SELECT * FROM products LIMIT 4";
+$result = $conn->query($sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,22 +34,24 @@
 <span class="close-btn" onclick="closeMenu()">×</span>
 </div>
 
-<a href="index.html">Home</a>
-<a href="accessories.html">Accessories </a>
-<a href="apple.html">Apple </a>
-<a href="pixel.html">Google Pixel </a>
-<a href="oraimo.html">Oraimo </a>
-<a href="samsung.html">Samsung </a>
-<a href="storage.html">Storage</a>
+<a href="index.php">Home</a>
+<a href="accessories.php">Accessories </a>
+<a href="apple.php">Apple </a>
+<a href="pixel.php">Google Pixel </a>
+<a href="oraimo.php">Oraimo </a>
+<a href="samsung.php">Samsung </a>
+<a href="storage.php">Storage</a>
 
 
 </div>
     <div class="logo">E-TRIC <span>CENTER</span></div>
 
-    <a href="cart.html" class="cart">
+    <a href="cart.php" class="cart">
         <i class="fa fa-shopping-cart"></i>
         <span id="cart-count">0</span>
     </a>
+    <a href="login.php" class="login">Login</a>
+
 </header>    
 
 
@@ -60,16 +70,16 @@
 
 <div class="navbar1">
 
-<a href="storage.html">Storage</a>
+<a href="storage.php">Storage</a>
 
-<a href="accessories.html">Accessories</a>
+<a href="accessories.php">Accessories</a>
 
-<a href="apple.html">Apple</a>
-<a href="oraimo.html">Oraimo</a>
+<a href="apple.php">Apple</a>
+<a href="oraimo.php">Oraimo</a>
 
-<a href="pixel.html">Google Pixel</a>
+<a href="pixel.php">Google Pixel</a>
 
-<a href="samsung.html">Samsung</a>
+<a href="samsung.php">Samsung</a>
 </div>
 
 
@@ -78,35 +88,35 @@
 
 <!-- PRODUCTS -->
 
-<section class="products"> 
-    <h3>Best Selling</h3> 
-    <div class="product-slider"> 
-        <div class="product-container" id="product-container"> 
-            <div class="product"> 
-                <img src="images/iphone 17 pro max.jpg"> 
-                <h4>Iphone 17 Pro Max</h4> 
-                <p>Ksh 150,000</p> 
-                <button onclick="addToCart('Iphone 17 Pro Max', 150000)">Add to Cart</button> 
-            </div> 
-            <div class="product"> 
-                <img src="images/oraimo space pods.jpg"> 
-                <h4>Oraimo Space Pods</h4> 
-                <p>Ksh 12,000</p> 
-                <button onclick="addToCart('Oraimo Space Pods', 12000)">Add to Cart</button> 
-            </div> 
-            <div class="product"> 
-                <img src="images/Samsung galaxy S25 Ultra.jpg"> 
-                <h4>Samsung Galaxy S25 Ultra</h4> 
-                <p>Ksh 110,000</p> 
-                <button onclick="addToCart('Samsung Galaxy S25 Ultra', 110000)">Add to Cart</button> 
-                </div>
-                <div class="product"> 
-                    <img src="images/Sony WH-CH720N.jpg"> 
-                    <h4>Sony WH-CH720N</h4> <p>Ksh 8,500</p> 
-                    <button onclick="addToCart('Sony WH-CH720N', 8500)">Add to Cart</button> 
-                </div> 
-            </div> 
-        </section>
+<div class="products">
+
+<?php
+if($result->num_rows > 0){
+
+while($row = $result->fetch_assoc()){
+?>
+
+<div class="product">
+
+<img src="images/<?php echo $row['image']; ?>">
+
+<h4><?php echo $row['name']; ?></h4>
+
+<p>KSH <?php echo $row['price']; ?></p>
+
+<button onclick="addToCart('<?php echo $row['name']; ?>', <?php echo $row['price']; ?>)">
+Add to Cart
+</button>
+
+</div>
+
+<?php
+}
+}
+?>
+
+</div>
+
 
 
 <section class="categories-section">
@@ -119,7 +129,7 @@
 <h3>Google Pixel</h3>
 <p>Pixel Phones</p>
 <p>Pixel Buds</p>
-<a href="pixel.html">Shop More >></a>
+<a href="pixel.php">Shop More >></a>
 </div>
 
 </div>
@@ -135,7 +145,7 @@
 <p>iPhone</p>
 <p>MacBook</p>
 <p>AirPods</p>
-<a href="apple.html">Shop More >></a>
+<a href="apple.php">Shop More >></a>
 </div>
 
 </div>
@@ -151,7 +161,7 @@
 <p>Galaxy Z Series</p>
 <p>Galaxy A Series</p>
 <p>Galaxy M & F Series</p>
-<a href="samsung.html">Shop More >></a>
+<a href="samsung.php">Shop More >></a>
 </div>
 
 </div>
@@ -167,7 +177,7 @@
 <p>Headset</p>
 <p>Oraimo Buds</p>
 <p>Speakers</p>
-<a href="oraimo.html">Shop More >></a>
+<a href="oraimo.php">Shop More >></a>
 </div>
 
 </div>
@@ -183,7 +193,7 @@
 <p>Cables</p>
 <p>Chargers</p>
 <p>Powerbank</p>
-<a href="accessories.html">Shop More >></a>
+<a href="accessories.php">Shop More >></a>
 </div>
 
 </div>
@@ -199,7 +209,7 @@
 <p>Hard Drives</p>
 <p>Memory Cards</p>
 <p>USB Hubs</p>
-<a href="storage.html">Shop More >></a>
+<a href="storage.php">Shop More >></a>
 </div>
 
 </div>
@@ -208,13 +218,7 @@
 
 <footer class="footer">
     <div class="footer-links">
-        <a href="index.html">Home</a>
-        <span>|</span>
-        <a href="#">Return & Refund Policy</a>
-        <span>|</span>
-        <a href="#">Shipping Information</a>
-        <span>|</span>
-        <a href="#">About Us</a>
+        <a href="index.php">Home</a>
         <span>|</span>
         <a href="contact.html">Contact Us</a>
                 
