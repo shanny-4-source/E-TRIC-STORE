@@ -1,0 +1,26 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# XAMPP / Local environment
+xampp/
+php_error_log
+
+# Environment files (IMPORTANT for security)
+.env
+
+# Node (if you ever use it)
+node_modules/
+
+# Composer (PHP packages)
+vendor/
+
+# Logs
+*.log
+
+# Database files (DO NOT upload)
+*.sql
+*.db
+
+# Cache files
+.cache/
